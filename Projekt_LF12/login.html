@@ -57,7 +57,7 @@
 <body>
     <div class="login-box">
         <h2>Login</h2>
-        <form action="weiterleitung.html" method="post">
+        <form action="weiterleitung.html" method="post" onsubmit="return validateForm()">
             <label for="username">Benutzername:</label>
             <input type="text" id="username" name="username" required><br><br>
             
@@ -67,5 +67,19 @@
             <input type="submit" value="Anmelden">
         </form>
     </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "Admin" && password === "admin") {
+                return true; // Erlaubt die Formularübermittlung
+            } else {
+                alert("Falscher Benutzername oder Passwort");
+                return false; // Verhindert die Formularübermittlung
+            }
+        }
+    </script>
 </body>
 </html>
