@@ -5,19 +5,35 @@
 </head>
 <body>
 
-<form method="POST" action="speichern.php">
-    <label for="PatientName">Patient Familiename:</label>
-    <input type="text" name="PatientName" id="PatientName"><br>
+<form method="POST" action="connector.php">
+    <div id="PtData">   
+        <label for="PatientName">Patient Familiename:</label>
+        <input type="text" name="PatientName" id="PatientName"><br>
     
-    <label for="PatientVorname">Patient Vorname:</label>
-    <input type="text" name="PatientVorname" id="PatientVorname"><br>
+        <label for="PatientVorname">Patient Vorname:</label>
+        <input type="text" name="PatientVorname" id="PatientVorname"><br>
     
-    <label for="PatientenBday">Geburtsdatum:</label>
-    <input type="text" name="PatientenBday" id="PatientenBday"><br>
+        <label for="PatientenBday">Geburtsdatum:</label>
+        <input type="text" name="PatientenBday" id="PatientenBday"><br>
 
-    <label for="">Einsatznummer:</label>
-    <input type="number" name="einsatznr" id="einsatznr" min="1"><br>
-    
+        <label for="PatientGender">Geschlecht:</label>
+        <input type="text" name="PatientenGender" id="PatientenGender"><br>
+    </div>
+
+    <div id="EinsatzData">
+        <label for="einsatznr">Einsatznummer:</label>
+        <input type="number" name="einsatznr" id="einsatznr" min="1"><br>
+        
+        
+        <label for="Einsatzart">Einsatzart:</label>
+        <select name="Einsatzart" id="Einsatzart">
+            <option value="Notfall">Notfall</option>
+            <option value="Verlegung">Verlegung</option>
+                
+        <label for="EinsatzDatum">EinsatzDatum:</label>
+        <input type="number" name="" id="">    
+             
+    </div>
     <input type="submit" value="Speichern">
 </form>
 
