@@ -2,6 +2,21 @@
 <html>
 <head>
     <title>Einsatzprotokoll</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- jQuery UI einbinden -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- JavaScript für den Kalender -->
+<script>
+    $(function() {
+        $("#datumPicker").click(function() {
+            $("#datum").datepicker(); // Kalender öffnen, wenn der Button geklickt wird
+        });
+    });
+</script>
 </head>
 <body>
 
@@ -13,8 +28,10 @@
         <label for="PatientVorname">Patient Vorname:</label>
         <input type="text" name="PatientVorname" id="PatientVorname"><br>
     
-        <label for="PatientenBday">Geburtsdatum:</label>
-        <input type="text" name="PatientenBday" id="PatientenBday"><br>
+        <label for="datum">Datum auswählen:</label>
+        <input type="text" name="datum" id="datum" readonly>
+        <button type="button" id="datumPicker">Datum auswählen</button>
+
 
         <label for="PatientGender">Geschlecht:</label>
         <input type="text" name="PatientenGender" id="PatientenGender"><br>
@@ -30,8 +47,10 @@
             <option value="Notfall">Notfall</option>
             <option value="Verlegung">Verlegung</option>
                 
-        <label for="EinsatzDatum">EinsatzDatum:</label>
-        <input type="number" name="" id="">    
+        <label for="Einsatzdatum">Datum auswählen:</label>
+        <input type="text" name="Einsatzdatum" id="Einsatzdatum" readonly>
+        <button type="button" id="datumPicker">Datum auswählen</button>
+   
              
     </div>
     <input type="submit" value="Speichern">
