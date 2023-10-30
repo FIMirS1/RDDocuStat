@@ -13,9 +13,9 @@ if ($conn->connect_error) {
 }
 
 // Benutzereingaben aus dem Formular abrufen
-$patientname = $_POST["patientname"];
-$patientvorname = $_POST["patientvorname"];
-$patientbday = $_POST["patientbday"];
+$ptname = $_POST["patientname"];
+$ptvorname = $_POST["patientvorname"];
+$ptbday = $_POST["patientbday"];
 $einsatznr = $_POST["einsatznr"]
 
 

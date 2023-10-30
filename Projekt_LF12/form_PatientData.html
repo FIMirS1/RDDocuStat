@@ -7,37 +7,57 @@
 <body>
 
 <form method="POST" action="connector.php">
-    <div id="PtData">   
-        <label for="PtName">Patient Familiename:</label>
-        <input type="text" name="PtName" id="PtName"><br>
+    <div id="PtData"> 
+        <h1>Patientendaten</h1><br>  
+        <label for="ptname">Patient Familiename:</label>
+        <input type="text" name="ptname" id="ptname"><br>
     
-        <label for="PtVoranme">Patient Vorname:</label>
-        <input type="text" name="PtVoranme" id="PtVoranme"><br>
+        <label for="ptvorname">Patient Vorname:</label>
+        <input type="text" name="ptvorname" id="ptvorname"><br>
     
-        <label for="PtBday">Geburtstag: </label>
-        <input type="date" name="PtBday" id="PtBday" ><br>
+        <label for="ptbday">Geburtstag: </label>
+        <input type="date" name="ptbday" id="ptbday" ><br>
         
 
-        <label for="PtGender">Geschlecht:</label>
-        <select name="PtGender" id="PtGender">
+        <label for="ptgender">Geschlecht:</label>
+        <select name="ptgender" id="ptgender">
             <option value="Mann">M</option>
-            <option value="Frau">W</option><br>
+            <option value="Frau">W</option>
+        </select><br>
     </div>
 
     <div id="EinsatzData">
+        <h1>Einsatzdaten</h1><br>
         <div id="EinsatNr">
             <label for="einsatznr">Einsatznummer:</label>
             <input type="number" name="einsatznr" id="einsatznr" min="1"><br>
         </div>   
-        <div id="EinsatzArt">
-            <label for="Einsatzart">Einsatzart:</label>
-            <select name="Einsatzart" id="Einsatzart">
-                <option value="Notfall">Notfall</option>
-                <option value="Verlegung">Verlegung</option><br>
+        <div id="EinsatzOrt">
+            <label for="einsatort">Einsatzort:</label>
+            <select name="einsatzort" id="einsatzort">
+                <option value="1">Privat</option>
+                <option value="2">öffentlicher Ort</option>
+                <option value="3">Verkehrsunfall</option>
+                <option value="4">Schule | Krippe </option>
+                <option value="5">Arbeit</option>
+                <option value="6">Sport</option>
+                <option value="7">Andere</option>
+                <option value="8">Verlegung</option>
+                <option value="9">Unbekannt</option>
+                <option value="10">Altenheim</option>
+                <option value="11">Präventiv</option>
+            </select><br>
         </div>
         <div id="EinsatDatum">
+            <h3>Datum</h3>
             <label for="Einsatzdatum">Datum:</label>
             <input type="date" name="Einsatzdatum" id="Einsatzdatum"><br>
+        </div>
+
+        <div id="">
+
+
+
         </div>
              
     </div>
