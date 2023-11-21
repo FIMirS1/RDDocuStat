@@ -16,7 +16,11 @@ if ($conn->connect_error) {
 $ptname = $_POST["patientname"];
 $ptvorname = $_POST["patientvorname"];
 $ptbday = $_POST["patientbday"];
-$einsatznr = $_POST["einsatznr"]
+$ptgender = $_POST["ptgender"]
+$einsatznr = $_POST["einsatznr"];
+$einsatzort = $_POST["einsatzort"];
+$einsatzdatum = $_POST["einsatzdatum"]
+$einsatzadresse = $_POST["einsatzadresse"]
 
 
 // SQL-Abfrage erstellen, um Daten einzufügen
