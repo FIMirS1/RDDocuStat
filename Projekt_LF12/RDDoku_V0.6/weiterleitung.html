@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weiterleitung</title>
+    <meta http-equiv="refresh" content="5;url=index.html">
+    <style>
+        /* Stil für den gesamten Körper */
+        body {
+            background-image: url('https://www.grenzecho.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/12/node_32943/7404444/public/2020/03/12/B9722904349Z.1_20200312155956_000+GGAFN8FQE.1-0.jpg?itok=rvPInQKK1584025202');
+            background-size: cover;
+            background-blur: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff; /* Textfarbe auf Weiß setzen */
+        }
+
+        /* Stil für den Text */
+        p {
+            font-size: 24px; /* Textgröße erhöhen */
+            text-align: center;
+            position: relative;
+        }
+
+        /* Stil für den animierten Ladekreis */
+        .loader-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .loader {
+            border: 8px solid #fff;
+            border-top: 8px solid transparent;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin-left: 10px; /* Abstand zum Text rechts */
+        }
+
+        /* Animationskeyframes für den Ladekreis */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader-container">
+        <p>Anmeldung erfolgreich. Weiterleitung zur Hauptseite...</p>
+        <div class="loader"></div>
+    </div>
+</body>
+</html>
