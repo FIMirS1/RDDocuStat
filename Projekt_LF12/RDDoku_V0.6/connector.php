@@ -20,7 +20,8 @@ $ptgender = $_POST["ptgender"];
 $einsatznr = $_POST["einsatznr"];
 $einsatzort = $_POST["einsatzort"];
 $einsatzdatum = $_POST["einsatzdatum"];
-
+$alarmnotarzt = $_POST["alarmnotarzt"];
+$transportziel = $_POST["transportziel"]
 
 
 // SQL-Abfrage erstellen, um Daten einzufügen
