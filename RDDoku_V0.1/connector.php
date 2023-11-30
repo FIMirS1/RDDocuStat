@@ -1,8 +1,8 @@
 <?php
 // Datenbankverbindung herstellen
-$servername = "localhost"; // Ihr Datenbank-Host
+$servername = "127.0.0.1"; // Ihr Datenbank-Host
 $username = "root"; // Ihr Datenbank-Benutzername
-$password = "root"; // Ihr Datenbank-Passwort
+$password = ""; // Ihr Datenbank-Passwort
 $dbname = "rd_stat"; // Ihr Datenbank-Name
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,18 +13,18 @@ if ($conn->connect_error) {
 }
 
 // Benutzereingaben aus dem Formular abrufen
-$ptname = $_POST["patientname"];
-$ptvorname = $_POST["patientvorname"];
-$ptbday = $_POST["patientbday"];
-$ptgender = $_POST["ptgender"]
+$ptname = $_POST["ptname"];
+$ptvorname = $_POST["ptvorname"];
+$ptbday = $_POST["ptbday"];
+$ptgender = $_POST["ptgender"];
 $einsatznr = $_POST["einsatznr"];
 $einsatzort = $_POST["einsatzort"];
-$einsatzdatum = $_POST["einsatzdatum"]
-$einsatzadresse = $_POST["einsatzadresse"]
+$einsatzdatum = $_POST["einsatzdatum"];
+
 
 
 // SQL-Abfrage erstellen, um Daten einzufügen
-$sql = "INSERT INTO IhreTabelle (Vorname, Nachname, Email) VALUES ('$vorname', '$nachname', '$email')";
+$sql = "INSERT INTO Dokumentation (Familienname, Vorname, Geburtstag, Geschlecht, Einsatznummer, Einsatzort, Datum) VALUES ('$ptname', '$ptvorname', '$ptbday', '$ptgender', '$einsatznr', '$einsatzort', '$einsatzdatum')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Daten erfolgreich in die Datenbank eingefügt.";

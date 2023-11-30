@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login-Seite</title>
+    <style>
+        /* Stil für den gesamten Körper */
+        body {
+            background-image: url('https://www.grenzecho.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/03/12/node_32943/7404444/public/2020/03/12/B9722904349Z.1_20200312155956_000+GGAFN8FQE.1-0.jpg?itok=rvPInQKK1584025202'); /* Hintergrundbild setzen */
+            background-size: cover;
+            background-blur: 5px; /* Hintergrund leicht geblurrt */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        /* Stil für die Login-Box */
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.8); /* Hintergrund mit Transparenz */
+            padding: 120px; /* Größere Polsterung */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        /* Stil für das Formular */
+        form {
+            margin: 0;
+        }
+        label {
+            display: block;
+            text-align: left; /* Linksbündige Ausrichtung der Labels */
+            margin-bottom: 10px; /* Größerer Abstand zwischen den Labels */
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 15px; /* Größere Polsterung */
+            align-items: center;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px; /* Größere Polsterung */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block; /* Zentriert die Schaltfläche horizontal */
+            margin: 0 auto; /* Zentriert die Schaltfläche horizontal */
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="weiterleitung.html" method="post" onsubmit="return validateForm()">
+            <label for="username">Benutzername:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <input type="submit" value="Anmelden">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "Admin" && password === "admin") {
+                return true; // Erlaubt die Formularübermittlung
+            } else {
+                alert("Falscher Benutzername oder Passwort");
+                return false; // Verhindert die Formularübermittlung
+            }
+        }
+    </script>
+</body>
+</html>
