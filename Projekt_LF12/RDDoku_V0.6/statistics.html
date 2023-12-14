@@ -14,7 +14,7 @@
     fetch('/chart-data')
       .then(response => response.json())
       .then(data => {
-        const labels = data.map(item => item.zielkrankenhaus);
+        const labels = data.map(item => item.transportziel);
         const values = data.map(item => item.count);
 
         // Chart erstellen
