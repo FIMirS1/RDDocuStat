@@ -16,9 +16,9 @@ connection.connect();
 // Endpunkt zum Abrufen der Daten
 app.get('/chart-data', (req, res) => {
   const query = `
-    SELECT zielkrankenhaus, COUNT(*) AS count
+    SELECT transportziel, COUNT(*) AS count
     FROM dokumentation
-    GROUP BY zielkrankenhaus
+    GROUP BY transportziel
   `;
 
   connection.query(query, (error, results, fields) => {
