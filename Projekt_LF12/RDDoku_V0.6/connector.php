@@ -25,7 +25,7 @@ $transportziel = $_POST["transportziel"]
 
 
 // SQL-Abfrage erstellen, um Daten einzufügen
-$sql = "INSERT INTO Dokumentation (Familienname, Vorname, Geburtstag, Geschlecht, Einsatznummer, Einsatzort, Datum) VALUES ('$ptname', '$ptvorname', '$ptbday', '$ptgender', '$einsatznr', '$einsatzort', '$einsatzdatum')";
+$sql = "INSERT INTO Dokumentation (Familienname, Vorname, Geburtstag, Geschlecht, Einsatznummer, Einsatzort, Datum, Transportziel) VALUES ('$ptname', '$ptvorname', '$ptbday', '$ptgender', '$einsatznr', '$einsatzort', '$einsatzdatum', '$transportziel')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Daten erfolgreich in die Datenbank eingefügt.";
